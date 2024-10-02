@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.contain{
+    display: flex;
+    width: 100%;
+    /* background-color: rgb(189, 190, 196); */
+    height: 200vh;
+     margin-top: 10px;
+    border-radius: 10px;
+    font-family: "PT Serif", serif;
+}
+.aside{
+    width: 25%;
+    /* margin-left: 2%; */
+    position: relative;
+    background-color: #929AAB;
+}
+.main{
+    width: 65%;
+    display: grid;
+    grid-template-rows: repeat(4, 55vh);
+    gap: 10px;
+}
+.grid1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 10px;
+  background-color: #929AAB;
+  border-radius: 10px;
+  gap: 10px;
+}
+.grid1-a{
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: "Qwitcher Grypen", cursive;
+}
+.grid1-a h1{
+  font-weight: bolder;
+  font-size: 60px;
+}
+.grid1-a h4{
+  font-family: "PT Serif", serif;
+  font-weight: 200;
+  font-size: 20px;
+  color: #EEEEEE;
+}
+.grid1-b div p{
+  animation-name: textdisplay;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes textdisplay {
+  0%{color: #393E46;}
+  25% {color:#EEEEEE;}
+  50%{color: #393E46;}
+  100% {color:#EEEEEE;}
+}
+.grid1-b .inner div img{
+  display: block;
+}
+.grid1-b .inner img{
+  display: none;
+}
+.grid2{
+  background-color: #929AAB;
+  margin: 0 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  /* font-family: "Caveat", cursive; */
+  color: #393E46;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.nav-bar{
+  width: 10%;
+  background-color: #929AAB;
+  position: relative;
+  /* margin-left: 10px; */
+}
+.icon-bar {
+    width: 5%; 
+    height: 700px;
+    /* margin-top: 50px; */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 3%;
+    /* background-color: #929AAB; */
+    /* margin-left: 0; */
+    justify-content: center;
+    align-content: center;
+    opacity: 2;
+  }
+  
+.icon-bar a {
+    display: block; 
+    text-align: center; 
+    padding: 16px; 
+    transition: all 0.3s ease; 
+    color: #000000;
+    font-size: 36px;
+    
+  }
+  
+.icon-bar a:hover {
+    background-color: #EEEEEE;
+    border-radius: 50%;
+  }
+  
+  .active {
+    background-color: #EEEEEE;
+    border-radius: 50%;
+  }
+
+  /* for small screen */
+
+  @media screen and (max-width:600px) {
+     .nav-bar{
+        display: none;
+     }    
+     .aside{
+      display: none;
+     }
+     .main{
+      width: 570px;
+      display: block;
+      gap: 0;
+  }
+  /* .grid1-b .inner2 {
+    height: 30vh;
+  } */
+   .grid1{
+    display: block;
+    height: 108vh;
+    gap: 20px;
+    width: 500px;
+    border-radius: 0;
+    margin: 0;
+   }  
+   .grid1-a h1{
+    font-weight: bold;
+    font-size: 30px;
+  }
+ 
+  .grid1-b .inner img{
+    width: 100%;
+    height: 50vh;
+    display: block;
+  }
+
+  .grid1-b .inner div img{
+    display: none;
+  }
+  .grid1-a h4{
+    font-family: "PT Serif", serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: #EEEEEE;
+  }
+  .grid2{
+    background-color: #929AAB;
+    margin: 0;
+    border-radius: 0;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    /* font-family: "Caveat", cursive; */
+    color: #EEEEEE;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    display: block;
+    width: 500px;
+    height: 35vh;
+    margin-top: 0vh;
+  }
+  }
+
+  /* for tab screen */
+
+  @media screen and (min-width:601px) and (max-width:900px) {
+    .nav-bar{
+      display: none;
+   }    
+   .aside{
+    display: none;
+   }
+   .main{
+    width: 800px;
+    gap: 0;
+   }
+    .grid1{
+      display: block;
+      height: 108vh;
+      gap: 20px;
+      width: 700px;
+      border-radius: 0;
+      margin: 0;
+     }  
+     .grid1-a h1{
+      font-weight: bold;
+      font-size: 30px;
+    }
+   
+    .grid1-b .inner img{
+      width: 100%;
+      height: 60vh;
+      display: block;
+    }
+  
+    .grid1-b .inner div img{
+      display: none;
+    }
+    .grid1-a h4{
+      font-family: "PT Serif", serif;
+      font-weight: 200;
+      font-size: 20px;
+      color: #EEEEEE;
+    }
+    .grid2{
+      background-color: #929AAB;
+      margin: 0;
+      border-radius: 0;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      /* font-family: "Caveat", cursive; */
+      color: #EEEEEE;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 20px;
+      display: block;
+      width: 700px;
+      height: 35vh;
+      margin-top: 0vh;
+      position: absolute;
+      top: 100vh;
+    }
+}
+  .aside1{
+    position: absolute;
+    margin-top: 40px;
+    height: 250px;
+    width: 350px;
+  }
+  .aside1 img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 140px;
+  }
+  .aside1-text{
+     margin-top: 110px;
+     font-size: 20px;
+     font-weight: 300;
+     width: 400px;
+     margin-left: 100px;
+  }
+  .aside1-icon{
+    margin-top: 180px;
+    margin-left: 60px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+  }
+  .aside1-icon a{
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: #EEEEEE;
+  }
+  .aside2{
+    position: relative;
+  }
+  .aside2 div strong{
+    color: #EEEEEE;
+  }
+  .age{
+    position: absolute;
+    background-color: #393E46;
+    width: 270px; 
+    margin-left: 60px;
+    height: 30px; 
+    display: flex;
+  }
+  .res{
+    position: absolute;
+    background-color: #393E46;
+    width: 270px; 
+    margin-left: 60px;
+    height: 30px; 
+    margin-top: 50px;
+    display: flex;
+  }
+  .free{
+    position: absolute;
+    background-color: #393E46;
+    width: 270px; 
+    margin-left: 60px;
+    height: 30px; 
+    margin-top: 100px;
+    display: flex;
+  }
+  .address{
+    position: absolute;
+    background-color: #393E46;
+    width: 270px; 
+    margin-left: 60px;
+    height: 30px; 
+    margin-top: 150px;
+    display: flex;
+  }
+  .lang{
+    margin-left: 60px;
+  }
+  .range{
+    width: 270px; 
+    height: 30px; 
+    display: flex;
+    justify-content: space-between;
+  }
+  .range1{
+    width: 270px; height: 10px; background-color: #393E46; border: #393E46 2px solid; border-radius: 5px;
+  }
+  .extra{
+    width: 270px; 
+    height: 30px; 
+    margin-left: 60px;
+  }
+  .Schools{
+    width: 270px; 
+    height: 30px; 
+    margin-left: 60px;
+    margin-top: 140px;
+  }
+  /* .sec1{
+    position: absolute;
+    width: 63%;
+    background-color: #929AAB;
+    height: 50vh;
+    margin-left: 1%;
+    border: #393E46 solid 2px;
+    border-radius: 5px; */
+    /* padding-left: 40%; */
+    /* padding-left: 40px; */
+    /* display: flex;
+    justify-content: last baseline;
+  } */
+  /* .sec1-a .sec1-b{
+    width: 30%;
+    height: 50vh;
+  }
+  .sec1-b div p{
+    animation-name: textdisplay;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes textdisplay {
+    0%{color: #393E46;}
+    25% {color:#EEEEEE;}
+    50%{color: #393E46;}
+    100% {color:#EEEEEE;}
+}
+.sec1-a div h1{
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  color: #EEEEEE;
+  font-size: 50px;
+  margin-left: 20px;
+ 
+} */
+
+/* .sec1-b{
+  /* padding-left: 30px; */
+  /* padding-right: 470px;
+  display: flex;
+}
+.sec1-a{
+  padding-left: 5px;
+} */
+
+ 
