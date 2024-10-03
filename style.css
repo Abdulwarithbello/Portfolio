@@ -23,18 +23,22 @@ body{
     position: relative;
     background-color: #929AAB;
 }
+
 .main{
     width: 65%;
     display: grid;
     grid-template-rows: repeat(4, 55vh);
-    gap: 10px;
+    background-image: linear-gradient(#929AAB,#393E46);
+    /* gap: 10px; */
+    z-index: 0;
 }
 .grid1{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 10px;
-  background-color: #929AAB;
-  border-radius: 10px;
+  /* margin: 0 10px; */
+  /* background-color: #929AAB; */
+  
+  /* border-radius: 10px; */
   gap: 10px;
 }
 .grid1-a{
@@ -66,14 +70,15 @@ body{
 }
 .grid1-b .inner div img{
   display: block;
+  -webkit-box-reflect: right;
 }
 .grid1-b .inner img{
   display: none;
 }
 .grid2{
-  background-color: #929AAB;
-  margin: 0 10px;
-  border-radius: 10px;
+  /* background-color: #929AAB; */
+  /* margin: 0 10px; */
+  /* border-radius: 10px; */
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -84,7 +89,9 @@ body{
   font-style: normal;
   font-size: 25px;
 }
-
+.phone-nav-bar{
+  display: none;
+}
 .nav-bar{
   width: 10%;
   background-color: #929AAB;
@@ -96,7 +103,7 @@ body{
     height: 700px;
     /* margin-top: 50px; */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
+    z-index: 1;
     top: 0; /* Stay at the top */
     right: 3%;
     /* background-color: #929AAB; */
@@ -113,7 +120,6 @@ body{
     transition: all 0.3s ease; 
     color: #000000;
     font-size: 36px;
-    
   }
   
 .icon-bar a:hover {
@@ -125,7 +131,11 @@ body{
     background-color: #EEEEEE;
     border-radius: 50%;
   }
-
+  .phone-aside{
+    display: none;
+    position: absolute;
+  }
+  
   /* for small screen */
 
   @media screen and (max-width:600px) {
@@ -139,10 +149,19 @@ body{
       width: 570px;
       display: block;
       gap: 0;
+      position: relative;
+      background-image: linear-gradient(#929AAB,#393E46);
   }
   /* .grid1-b .inner2 {
     height: 30vh;
   } */
+  .phone-aside{
+    display: block;
+    position: absolute;
+  }
+  .btn{
+    display: block;
+  }
    .grid1{
     display: block;
     height: 108vh;
@@ -150,6 +169,7 @@ body{
     width: 500px;
     border-radius: 0;
     margin: 0;
+    position: absolute;
    }  
    .grid1-a h1{
     font-weight: bold;
@@ -157,9 +177,12 @@ body{
   }
  
   .grid1-b .inner img{
-    width: 100%;
+    width: 50%;
     height: 50vh;
     display: block;
+    /* margin-left: 25%; */
+    border-radius: 10px;
+    -webkit-box-reflect: right;
   }
 
   .grid1-b .inner div img{
@@ -172,7 +195,7 @@ body{
     color: #EEEEEE;
   }
   .grid2{
-    background-color: #929AAB;
+    /* background-color: #929AAB; */
     margin: 0;
     border-radius: 0;
     justify-content: center;
@@ -187,8 +210,39 @@ body{
     display: block;
     width: 500px;
     height: 35vh;
-    margin-top: 0vh;
+    margin-top: 108vh;
+    /* position: absolute; */
   }
+  .phone-nav-bar{
+    display: block;
+    /* background-color:aqua; */
+    width: 30%;
+    height: 143vh;
+    position: fixed;
+    z-index: 1;
+    top: 0; /* Stay at the top */
+      right: 0%;
+      justify-content: center;
+      align-content: center;
+      opacity: 2;
+  }
+  
+.phone-nav-bar a {
+    display: block; 
+    text-align: center; 
+    padding: 30px; 
+    transition: all 0.3s ease; 
+    color: #000000;
+    font-size: 36px;
+  }
+  
+.phone-nav-bar a:hover {
+    background-color: #EEEEEE;
+    /* border-radius: 50%; */
+    opacity: 1;
+  }
+
+
   }
 
   /* for tab screen */
