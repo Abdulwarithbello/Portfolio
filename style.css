@@ -155,6 +155,7 @@ body{
       width: 320px;
       display: block;
       gap: 0;
+      z-index: 0;
       position: relative;
       background-image: linear-gradient(#929AAB,#393E46);
   }
@@ -237,15 +238,15 @@ body{
   .phone-nav-bar{
     display: block;
     /* background-color:aqua; */
-    width: 30%;
+    width: 100px;
     height: 143vh;
     position: fixed;
     z-index: 1;
     top: 0; /* Stay at the top */
-      right: 0%;
+      right: 30px;
       justify-content: center;
       align-content: center;
-      opacity: 2;
+      /* opacity: 2; */
   }
   
 .phone-nav-bar a {
@@ -257,7 +258,7 @@ body{
     font-size: 36px;
   }
   
-.phone-nav-bar a:hover {
+.phone-nav-bar a:active {
     background-color: #EEEEEE;
     /* border-radius: 50%; */
     opacity: 1;
