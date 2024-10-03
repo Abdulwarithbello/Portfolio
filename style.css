@@ -61,6 +61,7 @@ body{
   animation-name: textdisplay;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+  font-size: 5px;
 }
 @keyframes textdisplay {
   0%{color: #393E46;}
@@ -145,9 +146,13 @@ body{
      .aside{
       display: none;
      }
+     .contain{
+      width: 320px;
+      margin-top: 0;
+     }
      .main{
       min-width: none;
-      width: 570px;
+      width: 320px;
       display: block;
       gap: 0;
       position: relative;
@@ -162,6 +167,19 @@ body{
     height: 10vh;
     z-index: 1;
   }
+  .canvas1{
+    position: absolute;
+    margin-top: 40px;
+    height: 250px;
+    width: 200px;
+  }
+  .canvas1 div img{
+    position: absolute;
+    margin-top: 40px;
+    height: 250px;
+    width: 200px;
+  }
+
   .btn{
     display: block;
   }
@@ -169,7 +187,7 @@ body{
     display: block;
     height: 108vh;
     gap: 20px;
-    width: 500px;
+    
     border-radius: 0;
     margin: 0;
     position: absolute;
@@ -194,7 +212,7 @@ body{
   .grid1-a h4{
     font-family: "PT Serif", serif;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 15px;
     color: #EEEEEE;
   }
   .grid2{
@@ -211,9 +229,9 @@ body{
     font-style: normal;
     font-size: 15px;
     display: block;
-    width: 500px;
+    /* width: 500px; */
     height: 35vh;
-    margin-top: 108vh;
+    margin-top: 130vh;
     /* position: absolute; */
   }
   .phone-nav-bar{
